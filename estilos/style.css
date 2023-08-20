@@ -6,6 +6,51 @@
     margin: 0;
 }
 
-img {
-    background-size: cover;
+main {
+    background-image: url(/imagens/fundo-madeira.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+section {
+    display: inline-block;
+}
+
+section.celular {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.redes {
+    text-align: right;
+
+}
+
+
+iframe {
+    width: 311px;
+    height: 627px;
+    background-image: url(/imagens/frame-iphone.png);
+    background-repeat: no-repeat;
+
+
+    
+}
+
+li, a, img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+ul, li {
+    padding: 15px;
+    list-style: none;
+}
+
+img:hover {
+    border: 1px solid white;
+    border-radius: 50%;
 }
