@@ -4,16 +4,27 @@
 * {
     padding: 0;
     margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+}
+
+body {
+    background-image: url(/imagens/fundo-madeira.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 main {
-    background-image: url(/imagens/fundo-madeira.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-section {
-    display: inline-block;
+    position: relative;
+    height: 100vh;
+    
 }
 
 section.celular {
@@ -21,36 +32,72 @@ section.celular {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    background-image: url(/imagens/frame-iphone.png);
+    background-repeat: no-repeat;
+    width: 311px;
+    height: 627px;
+    animation: transicao linear 1s ;
 }
 
-.redes {
+section.redes-sociais {
+    display: flex;
+    flex-direction: column;
     text-align: right;
+    padding: 10px;
 
+}
+
+section.redes-sociais img {
+    width: 50px;
+    margin: 10px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border-style: solid;
+    border-width: 5px;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.596);
+    animation: clique linear 5s infinite;
+    animation-timing-function: ease-in-out 1s;
+}
+
+
+
+
+@keyframes clique {
+
+
+    0%{
+        border-color: #64004f;
+    }
+
+    50% {
+        border-color: #00ffff;
+    }
+
+    30% {
+        border-color: #d9ff00;
+    }
+
+    90% {
+        border-color: #8700a8;
+    }
 }
 
 
 iframe {
-    width: 311px;
-    height: 627px;
-    background-image: url(/imagens/frame-iphone.png);
-    background-repeat: no-repeat;
+    position: relative;
+    top: 80px;
+    left:22px;
+    height: 471px;
+    width: 267px;
 
-
-    
 }
 
-li, a, img {
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-}
+@keyframes transicao{
+    0% {
+        opacity: 0%;
+    }
 
-ul, li {
-    padding: 15px;
-    list-style: none;
-}
-
-img:hover {
-    border: 1px solid white;
-    border-radius: 50%;
+    100% {
+        opacity: 100%;
+    }
 }
